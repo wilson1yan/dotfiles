@@ -32,8 +32,8 @@ Plug 'tomtom/tcomment_vim'
 
 " Codel intel
 Plug 'dense-analysis/ale', { 'do': 'pip3 install ruff' }
-Plug 'Shougo/deoplete.nvim', { 'do': { -> SetupDeoplete() } }
-Plug 'deoplete-plugins/deoplete-jedi', { 'do': 'pip3 install jedi' }
+" Plug 'Shougo/deoplete.nvim', { 'do': { -> SetupDeoplete() } }
+" Plug 'deoplete-plugins/deoplete-jedi', { 'do': 'pip3 install jedi' }
 
 " Syntax highlighting
 Plug 'pangloss/vim-javascript'
@@ -102,18 +102,18 @@ let g:ale_lint_on_save = 1
 let g:ale_virtualtext_cursor = 'disabled'
 
 " Shougo/deoplete.nvim
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<c-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<c-k>"
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
-call deoplete#custom#option('min_pattern_length', 1)
+" call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+" call deoplete#custom#option('min_pattern_length', 1)
 " call deoplete#custom#option('sources', {'_': 'buffer']})
-call deoplete#custom#option('auto_complete_delay', 100)
+" call deoplete#custom#option('auto_complete_delay', 100)
 
 " deoplete-plugins/deoplete-jedi
 " let g:deoplete#sources#jedi#python_path = '/usr/bin/python3'
-let g:deoplete#sources#jedi#enable_typeinfo = 0  " Faster
+" let g:deoplete#sources#jedi#enable_typeinfo = 0  " Faster
 
 " davidhalter/jedi-vim
 " let g:jedi#completions_enabled = 0
