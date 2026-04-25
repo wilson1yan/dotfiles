@@ -57,6 +57,8 @@ export PATH="$HOME/.claude/bin:$HOME/.local/bin:$PATH"
 
 PROMPT='%F{111}%m%f %F{245}→%f %F{cyan}%1~%f %F{245}›%f '
 
+alias ls='ls --color=auto'
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
