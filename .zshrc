@@ -10,7 +10,16 @@ SAVEHIST=10000                # Lines saved to HISTFILE
 
 export PATH="$HOME/.local/bin:$PATH"
  
-PROMPT='%F{75}%m%f %F{39}→%f '
+setopt PROMPT_SUBST
+
+git_branch() {
+  local branch
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null) && echo " %F{red}($branch)%f"
+}
+
+PROMPT='%F{111}%m%f %F{245}→%f %F{cyan}%1~%f$(git_branch) %F{245}›%f '
+
+alias ls='ls --color=auto'
  
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
