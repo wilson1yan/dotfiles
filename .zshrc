@@ -26,3 +26,5 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
  
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^H' backward-delete-char
