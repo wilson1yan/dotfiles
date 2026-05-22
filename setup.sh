@@ -51,20 +51,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 # Install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting 2>/dev/null || true
 
-# Write .zshrc
-cat > ~/.zshrc << 'EOF'
-export PATH="$HOME/.claude/bin:$HOME/.local/bin:$PATH"
-
-PROMPT='%F{111}%m%f %F{245}→%f %F{cyan}%1~%f %F{245}›%f '
-
-alias ls='ls --color=auto'
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-bindkey -v
-bindkey '^R' history-incremental-search-backward
-EOF
+# Fetch .zshrc from dotfiles
+curl -fsSL https://raw.githubusercontent.com/wilson1yan/dotfiles/refs/heads/main/.zshrc -o ~/.zshrc
 
 # Set zsh as default shell
 sudo chsh -s "$(which zsh)" "$(whoami)" || echo "Could not change shell automatically. Run: sudo chsh -s \$(which zsh) \$(whoami)"
