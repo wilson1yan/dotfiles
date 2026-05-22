@@ -68,7 +68,7 @@ curl -fsSL https://raw.githubusercontent.com/wilson1yan/dotfiles/refs/heads/main
 # ---------------------------------------------------------------------------
 echo "=== Setting up Neovim config ==="
 mkdir -p ~/.config/nvim
-curl -fsSL https://raw.githubusercontent.com/danijar/dotfiles/refs/heads/master/.config/nvim/init.lua -o ~/.config/nvim/init.lua
+curl -fsSL https://raw.githubusercontent.com/wilson1yan/dotfiles/refs/heads/main/.config/nvim/init.lua -o ~/.config/nvim/init.lua
 
 echo ""
 echo "=== Done! ==="
