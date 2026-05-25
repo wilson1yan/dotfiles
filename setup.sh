@@ -11,6 +11,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting 2>/dev/null || true
 curl -fsSL https://raw.githubusercontent.com/wilson1yan/dotfiles/refs/heads/main/.zshrc -o ~/.zshrc
 sudo chsh -s "$(which zsh)" "$(whoami)" || echo "Could not change shell automatically. Run: sudo chsh -s \$(which zsh) \$(whoami)"
+zsh
 
 echo "=== Installing uv ==="
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -48,3 +49,6 @@ curl -fsSL https://raw.githubusercontent.com/wilson1yan/dotfiles/refs/heads/main
 
 cargo install worktrunk
 echo "y" | wt config shell install
+
+echo "AcceptEnv GH_TOKEN" | sudo tee -a /etc/ssh/sshd_config > /dev/null
+sudo systemctl restart ssh 2>/dev/null || sudo systemctl restart sshd
