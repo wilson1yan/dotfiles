@@ -1,0 +1,33 @@
+[push]
+  default = current
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
+[alias]
+  append = commit --amend --no-edit
+  reword = commit --amend
+[init]
+  defaultBranch = main
+  editor = nvim
+[core]
+  excludesfile = ~/.gitignore_global
+  pager = delta
+[delta]
+  syntax-theme = none
+  file-style = bold
+  file-decoration-style = none
+  hunk-header-style = raw
+  hunk-header-decoration-style = none
+  line-numbers = true
+  line-numbers-left-format = " {nm:>1} "
+  line-numbers-right-format = ""
+  line-numbers-left-style = gray
+  line-numbers-minus-style = gray
+  line-numbers-plus-style = gray
+  line-numbers-right-style = gray
+  line-numbers-zero-style = gray
+  max-line-length = 1000
+[user]
+	name = Danijar Hafner
+	email = mail@danijar.com
