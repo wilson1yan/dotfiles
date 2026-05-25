@@ -44,8 +44,7 @@ echo "=== Installing GitHub ==="
   && sudo apt-get update \
   && sudo apt-get install -y gh
 
-git config --global user.email "wilson1.yan@berkeley.edu"
-git config --global user.name "Wilson Yan"
+curl -fsSL https://raw.githubusercontent.com/wilson1yan/dotfiles/refs/heads/main/.gitconfig -o ~/.gitconfig
 
 cargo install worktrunk
 echo "y" | wt config shell install
