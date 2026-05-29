@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "=== Installing system packages ==="
 sudo apt-get update
-sudo apt-get install -y zsh curl tmux ripgrep htop git software-properties-common build-essential python3 python3-venv
+sudo apt-get install -y zsh curl tmux ripgrep htop git software-properties-common build-essential python3 python3-venv git-delta
 
 echo "=== Setting up Zsh ==="
 
