@@ -13,6 +13,7 @@
 [core]
   excludesfile = ~/.gitignore_global
   pager = delta
+  editor = nvim
 [delta]
   syntax-theme = none
   file-style = bold
